@@ -13,9 +13,9 @@ While the challenges in this lab will stretch your thinking, the satisfaction of
 
 - [Setup](./setup/README.md)
 - [Exercise: Intro](./exercise-intro/README.md)
-- [Exercise: Part 1 - 3](./exercise-1-3/README.md)
-- [Exercise: Part 4 - 5](./exercise-4-5/README.md)
-- [Exercise: Part 6 - 7](./exercise-6-7/README.md)
+- [Hint Set A](./exercise-1-3/README.md)
+- [Hint Set B](./exercise-4-5/README.md)
+
 
 ## Level Up content
 
