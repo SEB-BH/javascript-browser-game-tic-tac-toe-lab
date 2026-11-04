@@ -1,60 +1,226 @@
 <h1>
   <span class="headline">Tic Tac Toe Lab</span>
-  <span class="subhead">Exercise Part 4-5</span>
+  <span class="subhead">Hint Set B - Level Up 🚀</span>
 </h1>
 
-## Step 4
+## Hint set 1: Using an array — Level Up
 
-**The state of the game should be rendered to the user.**
+This approach extends the **Level Up** tasks in Cozy Cafe, Part 5.
 
-a. Create a function called `render`, then set it aside for now.
+The core cafe task did not require an array or a rendering function. Use the linked lessons if these connections are still new.
 
-b. Create a function called `updateBoard`.
+<details markdown="1">
+<summary>Hint 1: Store the game’s data</summary>
 
-c. In the `updateBoard` function, loop over `board` and for each element:
+One possible plan uses:
 
-   - Use the current index of the iteration to access the corresponding square in the `squareEls`.
+- `board`: an array of nine empty strings.
+- `turn`: the current player, starting as `'X'`.
+- `winner`: whether someone has won, starting as `false`.
+- `tie`: whether the game is a tie, starting as `false`.
 
-     > 📖 Check out the MDN documentation on `forEach()` to help out with this! What do you have access to in the callback function that could help with this?
+An empty string represents an empty square. A played square contains `'X'` or `'O'`.
 
-   - Style that square however you wish, dependent on the value contained in the current cell being iterated over (`'X'`, `'O'`, or `''`). To keep it simple, start by just putting a letter in each square depending on the value of each cell.
+The array indexes match the board positions shown above.
 
-d. Create a function called `updateMessage`.
+**Reminder:**
 
-e. In `updateMessage`, render a message based on the current game state:
+- [Arrays: accessing elements by index](https://seb-bh.github.io/intro-to-javascript-arrays/reading/#accessing-elements-at-any-position-in-an-array).
 
-   - If both `winner` and `tie` have a value of `false` (meaning the game is still in progress), render whose turn it is.
-   - If `winner` is `false`, but `tie` is true, render a tie message.
-   - Otherwise, render a congratulatory message to the player that has won.
+</details>
 
-f. Invoke both the `updateBoard` and the `updateMessage` functions inside your `render` function. 
+<details markdown="1">
+<summary>Hint 2: Select the page elements</summary>
 
-After completing all of step 4, you should be able to manually change the values held in the `board` array in the `init()` function and see the style of the corresponding square change on your page.
+Select the collection of squares, the message element, and the reset button.
 
-For example, when the board array is a collection of empty strings, you should see something like this:
-![Empty board](./assets/empty-board.png)
+`querySelectorAll()` gives you a collection that you can access by index or loop through.
 
-If the board holds an X and O in the top left and top middle positions, you should see something like this:
-![Active board](./assets/active-board.png)
+**Reminders:**
 
-## Step 5
+- [Cheatsheet: Select Multiple Elements](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#3-select-multiple-elements).
+- [Intro to the DOM: selecting multiple elements](https://ga-curriculum.github.io/intro-to-the-dom/working-with-collections-of-elements/#selecting-multiple-elements).
 
-**Define the required constants.**
+</details>
 
-a. In a constant called `winningCombos`, define the eight possible winning combinations as an array of arrays.
+<details markdown="1">
+<summary>Hint 3: Display the array</summary>
 
-   - Want a hint of what this will look like?
+Create a rendering function.
 
-     > 💡 To get you started, this will look like:
-     >
-     > ```js
-     > const winningCombos = [
-     >   [0, 1, 2],
-     >   [3, 4, 5],
-     >   // and so on
-     > ]
-     > ```
-     >
-     > In this array of arrays, the first array (`[0, 1, 2]`) represents a winning combination on the board's top row. The second array (`[3, 4, 5]`) represents a winning combination on the middle row of the board. Use the above as a scaffolding to build the six remaining winning combinations.
+Loop through the board array using `forEach()`. Use each item’s index to find the corresponding square, then display the item using `textContent`.
 
-> 🧠 Each array will contain three indices of the board that make a winner if they hold the same player value (`'X'` or `'O'`).
+The array item already contains the text you need: `'X'`, `'O'`, or `''`.
+
+Call the function when the page loads. Temporarily change one array item to confirm it appears in the matching square.
+
+**Reminders:**
+
+- Cozy Cafe, Part 5 **Level Up**: use an availability array and a render function.
+- [Arrays: `forEach()` and its index parameter](https://seb-bh.github.io/intro-to-javascript-arrays/forEach/#syntax).
+- [Cheatsheet: Read or Change Text](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#4-read-or-change-text).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 4: Connect a click to an array position</summary>
+
+Create a handler with an `event` parameter. Attach it to each square using a loop.
+
+Inside the handler, read `event.target.id`. That ID identifies the board position to update.
+
+Change that array item to the current player’s mark, then call your rendering function.
+
+HTML IDs are strings. An ID such as `"2"` can still access position `2` in the array.
+
+**Reminders:**
+
+- Cozy Cafe, Part 5 **Level Up**: share one handler that edits the array.
+- [Cheatsheet: Use a Named Event Handler](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#11-use-a-named-event-handler).
+- [Cheatsheet: Use the Event Object](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#12-use-the-event-object).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 5: Reject invalid moves</summary>
+
+Before changing the array, check whether the selected position already contains a mark.
+
+Also check whether the game has ended.
+
+If either makes the move invalid, stop the handler before changing the board or switching players.
+
+A `return;` statement stops the function.
+
+**Reminder:**
+
+- [Functions: the `return` statement](https://seb-bh.github.io/intro-to-javascript-functions/return-values/#the-return-statement).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 6: Alternate players</summary>
+
+After a valid move, use `if...else` to change `'X'` to `'O'`, or `'O'` to `'X'`.
+
+Once you add winner and tie checks, switch players only if the game is still running.
+
+Render after updating the game data.
+
+**Reminder:**
+
+- [Control Flow: branching](https://seb-bh.github.io/javascript-control-flow/branching/).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 7: Check one winning line first</summary>
+
+Start with the top row.
+
+Check that:
+
+- `board[0]` is not empty.
+- `board[0]` matches `board[1]`.
+- `board[0]` matches `board[2]`.
+
+All three conditions must be true, so connect them with `&&`.
+
+If they are true, record that someone has won. Repeat the pattern for the other seven winning lines.
+
+Check for a winner before switching players.
+
+**Reminder:**
+
+- [Control Flow: logical operators](https://seb-bh.github.io/javascript-control-flow/boolean-logic/#logical-operators).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 8: Check for a tie</summary>
+
+Check for a winner first.
+
+If nobody has won, count the empty strings in the board array using a loop.
+
+If there are no empty strings, the game is a tie.
+
+Start your empty-square counter at zero each time you perform this check.
+
+**Reminder:**
+
+- [Arrays: looping with `forEach()`](https://seb-bh.github.io/intro-to-javascript-arrays/forEach/#syntax).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 9: Put the game actions in order</summary>
+
+Your click handler should follow this plan:
+
+```text
+Reject an invalid move.
+Record the current player's mark.
+Check for a winner.
+Check for a tie.
+Switch players if the game is still running.
+Render the updated data.
+```
+
+Keep the winning player as the current player when the game ends. You can then use that value in the winner message.
+
+**Reminder:**
+
+- [Functions: calling helper functions](https://seb-bh.github.io/intro-to-javascript-functions/return-values/#bringing-it-all-together).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 10: Display the correct message</summary>
+
+Your rendering function should display:
+
+1. The winner, if someone has won.
+2. Otherwise, a tie message if the game is a tie.
+3. Otherwise, whose turn it is.
+
+Changing a variable does not automatically update the page. Your rendering function must run again after the data changes.
+
+**Reminder:**
+
+- [Cheatsheet: Read or Change Text](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#4-read-or-change-text).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 11: Keep the completed game unchanged</summary>
+
+Every click handler should check whether the game has already ended.
+
+After a win, some squares may still be empty. Those squares must no longer accept moves.
+
+Try clicking an empty square after winning. The board and message should remain unchanged.
+
+**Reminder:**
+
+- [Control Flow: logical operators](https://seb-bh.github.io/javascript-control-flow/boolean-logic/#logical-operators).
+
+</details>
+
+<details markdown="1">
+<summary>Hint 12: Reset the data and render again</summary>
+
+Create a function that restores the starting data and calls your rendering function.
+
+Keep the state variables declared outside this function so the other functions can use them.
+
+Call the function once to start the game, and pass it as the reset button’s click handler.
+
+Attach the event listeners once, outside the reset function.
+
+**Reminders:**
+
+- [Cheatsheet: Use a Named Event Handler](https://seb-bh.github.io/cozy-cafe-lab/cheatsheet/#11-use-a-named-event-handler).
+- [Functions: calling a function](https://seb-bh.github.io/intro-to-javascript-functions/fundamentals/#calling-a-function).
+
+</details>
