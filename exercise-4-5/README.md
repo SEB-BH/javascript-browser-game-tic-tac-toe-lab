@@ -3,7 +3,7 @@
   <span class="subhead">Hint Set B - Level Up 🚀</span>
 </h1>
 
-## Hint set 1: Using an array — Level Up
+## Hint set B: Using an array — Level Up
 
 This approach extends the **Level Up** tasks in Cozy Cafe, Part 5.
 
