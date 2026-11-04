@@ -26,27 +26,15 @@
           "videoUrl": ""
         },
         {
-          "friendlyName": "Exercise Part 1-3",
+          "friendlyName": "Hint Set A",
           "dirName": "exercise-1-3",
           "type": "Content",
           "videoUrl": ""
         },
         {
-          "friendlyName": "Exercise Part 4-5",
+          "friendlyName": "Hint Set B",
           "dirName": "exercise-4-5",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Exercise Part 6-7",
-          "dirName": "exercise-6-7",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Level Up",
-          "dirName": "level-up",
-          "type": "Content",
+          "type": "Level Up Content",
           "videoUrl": ""
         }
       ],
@@ -89,27 +77,15 @@
           "videoUrl": ""
         },
         {
-          "friendlyName": "Exercise Part 1-3",
+          "friendlyName": "Hint Set A",
           "dirName": "exercise-1-3",
           "type": "Content",
           "videoUrl": ""
         },
         {
-          "friendlyName": "Exercise Part 4-5",
+          "friendlyName": "Hint Set B",
           "dirName": "exercise-4-5",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Exercise Part 6-7",
-          "dirName": "exercise-6-7",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Level Up",
-          "dirName": "level-up",
-          "type": "Content",
+          "type": "Level Up Content",
           "videoUrl": ""
         }
       ],
