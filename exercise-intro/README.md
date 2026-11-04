@@ -40,8 +40,8 @@ Both approaches can meet the requirements.
 
 | Approach | How it works | Hints |
 |---|---|---|
-| Individual squares | Select each square separately and change its `textContent` directly, like the core Cozy Cafe task. | Hint set A |
-| Arrays — Level Up | Store the moves in an array and use a rendering function to display them. | Hint set B 🚀|
+| Individual squares | Select each square separately and change its `textContent` directly, like the core Cozy Cafe task. | [Hint set A](../exercise-1-3/README.md) |
+| Arrays — Level Up | Store the moves in an array and use a rendering function to display them. | [Hint set B 🚀](./exercise-4-5/README.md)|
 
 If you want to build one square at a time, start with **Hint set 2**. You can return to the array approach after your game works.
 
@@ -72,4 +72,5 @@ A player wins when their mark occupies all three positions in one of these group
 
 Use this table as a reference. You can write a separate condition for each winning line.
 
-
+- [Hint Set A](./exercise-1-3/README.md)
+- [Hint Set B](./exercise-4-5/README.md)
