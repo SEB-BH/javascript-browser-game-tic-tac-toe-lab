@@ -14,12 +14,11 @@ While the challenges in this lab will stretch your thinking, the satisfaction of
 - [Setup](./setup/README.md)
 - [Exercise: Intro](./exercise-intro/README.md)
 - [Hint Set A](./exercise-1-3/README.md)
-- [Hint Set B](./exercise-4-5/README.md)
 
 
 ## Level Up content
 
-🚀 [Level Up](./level-up/README.md)
+🚀  [Hint Set B](./exercise-4-5/README.md)
 
 ### Deployed sites
 
