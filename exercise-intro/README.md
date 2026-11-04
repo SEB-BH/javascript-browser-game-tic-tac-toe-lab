@@ -43,7 +43,7 @@ Both approaches can meet the requirements.
 | Individual squares | Select each square separately and change its `textContent` directly, like the core Cozy Cafe task. | [Hint set A](../exercise-1-3/README.md) |
 | Arrays — Level Up | Store the moves in an array and use a rendering function to display them. | [Hint set B 🚀](../exercise-4-5/README.md)|
 
-If you want to build one square at a time, start with **Hint set 2**. You can return to the array approach after your game works.
+If you want to build one square at a time, start with **Hint set A**. You can return to the array approach after your game works.
 
 ## Board positions
 
