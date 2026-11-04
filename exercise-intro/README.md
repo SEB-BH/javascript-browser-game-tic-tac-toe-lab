@@ -9,7 +9,7 @@
 
 Build a Tic-Tac-Toe game using the HTML and CSS provided.
 
-Write your JavaScript in `js/app.js`. Use your previous lessons, your Cozy Cafe work, and the optional hints below.
+Write your JavaScript in `app.js`. Use your previous lessons, your Cozy Cafe work, and the optional hints below.
 
 ## Requirements
 
