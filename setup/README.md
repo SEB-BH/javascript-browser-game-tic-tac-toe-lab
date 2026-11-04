@@ -11,7 +11,7 @@ Open your Terminal application and navigate to your `~/code/ga/labs` directory:
 cd ~/code/ga/labs
 ```
 
-Navigate to [this Tic Tac Toe Starter Code Repo](https://github.com/SEB-PT-10/tic-tac-toe) and fork it.
+Navigate to [this Tic Tac Toe Starter Code Repo](https://github.com/SEB-PT-10/tic-tac-toe) and `fork` it.
 
 Click on the green `Code` button, and copy the `HTTP` link to your forked repo.  (Double check that you see YOUR username in the link)
 
